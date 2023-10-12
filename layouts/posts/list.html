@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="posts-list">
+{{ range .Pages }}
+  <div>
+
+    <h3>
+  <a href="{{.Permalink}}">
+{{ .Title }}
+  </a>
+
+    </h3>
+    {{ .Summary }}
+  </div>
+{{ end }}
+</div>
+
+{{ end }}

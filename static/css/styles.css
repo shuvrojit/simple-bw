@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
 
 
 .latest-post {
-    width: 80vw;
+    width: 400px;
     margin: 5rem auto;
 
 }
@@ -213,7 +213,7 @@ h1, h2, h3, h4 {
     /* position: fixed; */
     /* position: absolute; */
     /* bottom: 0; */
-    width: 100vw;
+    width: 100%;
 }
 
 .footer-nav>ul {
@@ -237,7 +237,7 @@ h1, h2, h3, h4 {
 #top {
     font-family: var(--header-title-font), Arial, Helvetica, sans-serif;
     font-size: 3rem;
-    margin: 40px auto;
+    margin: 64px auto;
     text-align: center;
 }
 
@@ -247,21 +247,33 @@ h1, h2, h3, h4 {
     font-size: 1.3rem;
 }
 
-main h1,h2,h3 {
-    width: 80vw;
-    margin: 40px auto;
+#post-content>h1, #post-content>h2,#post-content>h3 {
+    width: 60vw;
+    margin: 48px auto;
 }
 
-main h1 {
+
+#post-content>h2::before {
+    content: "# ";
+}
+
+
+#post-content>h3::before {
+    content: "## ";
+}
+
+#post-content>h1 {
     font-size: 2.0rem;
 }
 
-main h2 {
-    font-size: 1.8rem;
+#post-content>h2 {
+    font-size: 2.0rem;
+    color: #e37979;
 }
 
-main h3 {
-    font-size: 1.5rem;
+#post-content>h3 {
+    font-size: 1.8rem;
+    color: #497328
 }
 
 .nav-section {
@@ -269,17 +281,12 @@ main h3 {
     font-family: "Open sans";
 }
 
-.metadata {
-    margin-bottom: 40px;
-    margin: 0 auto;
-}
-
 .main-container {
     width: 80vw;
 
 }
 
-main p {
+#post-content p {
     width: 64vw;
     margin: 32px auto;
 }
@@ -289,6 +296,8 @@ main p {
 
 .metadata {
     text-align: center;
+    margin: 64px auto;
+    font-size: 1.1rem;
 
 }
 
@@ -340,6 +349,7 @@ main p {
 
 /* Code */
 pre {
+    margin: 48px 96px;
     padding: 1rem;
     white-space: pre-wrap;       /* css-3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -351,9 +361,26 @@ pre {
 
 
 
-p>code {
-    font-family: "Roboto Mono", monospace;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    background: white;
+code {
+    font-family: monospace;
+    font-size: 1.1rem;
+    /* background: white; */
+}
+
+
+/* POST LISTS */
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 64vw;
+    margin: 64px auto;
+    gap: 40px
+}
+
+.posts-list h3 {
+    font-size: 1.8rem;
+    margin: 16px auto;
 }
