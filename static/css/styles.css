@@ -1,0 +1,364 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --header-title-font: Lato;
+    --header-body-font: "Open Sans";
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a>li {
+    list-style: none;
+    margin: 0 10px;
+
+}
+
+a:visited {
+    color: black;
+
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 16px;
+    align-items: center;
+}
+
+.nav-header>a:hover {
+    text-decoration: none;
+}
+
+.header-intro>p:nth-child(1) {
+    font-family: var(--header-title-font), Arial, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.header-intro>p:nth-child(2) {
+    font-family: var(--header-body-font), Arial, Helvetica, sans-serif;
+    font-size: 1.0rem;
+}
+
+.header-nav {
+    width: 300px;
+}
+
+.header-nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: var(--header-title-font), Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+
+}
+
+#contact-btn {
+  align-items: center;
+  /* background-color: #fee6e3; */
+  background-color: #ffffff;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#contact-btn:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+#contact-btn:hover:after {
+  transform: translate(0, 0);
+}
+
+#contact-btn:active {
+  /* background-color: #ffdeda; */
+  background-color: black;
+    color:  white;
+  outline: 0;
+}
+
+#contact-btn:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  #contact-btn{
+    padding: 0 40px;
+  }
+}
+
+
+.latest-post {
+    width: 80vw;
+    margin: 5rem auto;
+
+}
+
+.latest-post>h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    color: #414141;
+    letter-spacing: 2px;
+}
+
+.latest-post p {
+    font-size: 1.4rem;
+    color: #262626
+}
+
+.footer-nav {
+    /* position: fixed; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100vw;
+}
+
+.footer-nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 24px auto;
+    font-family: var(--header-title-font), Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 787px) {
+    .header-nav {
+        display: none;
+    }
+}
+
+/* Content section */
+
+#top {
+    font-family: var(--header-title-font), Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 40px auto;
+    text-align: center;
+}
+
+
+#content {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+main h1,h2,h3 {
+    width: 80vw;
+    margin: 40px auto;
+}
+
+main h1 {
+    font-size: 2.0rem;
+}
+
+main h2 {
+    font-size: 1.8rem;
+}
+
+main h3 {
+    font-size: 1.5rem;
+}
+
+.nav-section {
+    font-weight: 500;
+    font-family: "Open sans";
+}
+
+.metadata {
+    margin-bottom: 40px;
+    margin: 0 auto;
+}
+
+.main-container {
+    width: 80vw;
+
+}
+
+main p {
+    width: 64vw;
+    margin: 32px auto;
+}
+
+
+/* Meatadata */
+
+.metadata {
+    text-align: center;
+
+}
+
+.metadata>p:first-child {
+    font-weight: bold;
+    margin: 8px;
+}
+.metadata>p:nth-child(2) {
+    color: red;
+}
+
+#last-mod {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+
+}
+
+.tag-text {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tag-list>li {
+    border: 1px solid green;
+    margin: 4px;
+    padding: 4px;
+}
+
+
+.tag-list>li:hover {
+    background-color: #414141;
+    color: #ffffff;
+
+}
+.tag-list>li>a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* Code */
+pre {
+    padding: 1rem;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-break: break-all;
+
+}
+
+
+
+p>code {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    background: white;
+}
