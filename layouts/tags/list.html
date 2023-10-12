@@ -1,10 +1,11 @@
 {{ define "main" }}
+<div id="tags">
+  <h2>Tags</h2>
 <ul>
     {{ range .Pages }}
-        <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-            {{ .Params.wikipedia }}
-        </li>
+            <!-- {{ .Params.wikipedia }} -->
     {{ end }}
 </ul>
+</div>
 {{ end }}
