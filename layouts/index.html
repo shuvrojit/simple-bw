@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+
+  <section class="latest-post">
+    <h2>Latest Posts</h2>
+
+{{ range (where .Site.RegularPages "Section" "posts")}}
+
+
+<!-- <i class="fa-solid fa-file-pen"></i> {{ .Title }} -->
+    <p><a href="{{.Permalink}}">{{ .Title }}  </a>
+</p>
+
+  {{ end }}
+  </section>
+
+{{ end }}
