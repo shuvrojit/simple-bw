@@ -325,23 +325,18 @@ main p {
 
 }
 
-.tag-list>li {
+.tag-list>a {
     border: 1px solid green;
     margin: 4px;
     padding: 4px;
 }
 
 
-.tag-list>li:hover {
+.tag-list>a:hover {
     background-color: #414141;
     color: #ffffff;
-
-}
-.tag-list>li>a:hover {
     text-decoration: none;
-    color: #ffffff;
 }
-
 
 /* Code */
 pre {
