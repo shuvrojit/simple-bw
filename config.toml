@@ -1,0 +1,3 @@
+[mdoule]
+  [hugoVersion]
+  min = "0.118.2"
