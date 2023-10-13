@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ .Site.Title }}</title>
 <!-- <script src="https://kit.fontawesome.com/f90e4f4a50.js" crossorigin="anonymous"></script> -->
-<link href="{{ $.Site.BaseURL }}css/styles.css" rel="stylesheet">
+  {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
+<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
   <!-- {{- if .Site.Params.googleAnalytics -}} -->
 <!-- Google tag (gtag.js) -->
