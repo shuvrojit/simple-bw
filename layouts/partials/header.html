@@ -13,9 +13,10 @@
       <a href="/tags">
         <li>Tags</li>
       </a>
+{{ $caret := resources.Get "images/caret-down.svg" }}
 
       <div class="dropdown">
-        <a class="dropbtn">Categories</a>
+        <a class="dropbtn">Categories<img src="{{ $caret.RelPermalink }} "></a>
         <div id="myDropdown" class="dropdown-content">
   {{ range .Site.Taxonomies.categories }}
     <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
