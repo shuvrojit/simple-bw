@@ -10,6 +10,9 @@
   {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
+  {{ $js := resources.Get "index.js" | js.Build }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+
   <!-- {{- if .Site.Params.googleAnalytics -}} -->
 <!-- Google tag (gtag.js) -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6T5CCL4346"></script> -->

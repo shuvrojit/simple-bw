@@ -8,15 +8,27 @@
   <div class="header-nav">
     <ul>
       <a href="/posts">
-        <li>About</li>
+        <li>Posts</li>
       </a>
       <a href="/tags">
         <li>Tags</li>
       </a>
-      <a href="#">
-        <li>Categories</li>
-      </a>
+
+      <div class="dropdown">
+        <a class="dropbtn">Categories</a>
+        <div id="myDropdown" class="dropdown-content">
+  {{ range .Site.Taxonomies.categories }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+  {{ end }}
+
+        </div>
+      </div>
+
     </ul>
   </div>
-  <button id="contact-btn">Contact</button>
+  <div class="search">
+    <input type="search" placeholder="search">
+      <div><div>
+  </div>
+  <!-- <button id="contact-btn">Contact</button> -->
 </header>

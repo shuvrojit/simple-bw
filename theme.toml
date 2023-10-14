@@ -14,3 +14,7 @@ min_version = "0.112.3"
   name = "Shuvrojit Biswas"
   homepage = ""
 
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
