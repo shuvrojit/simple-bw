@@ -184,12 +184,6 @@ h1, h2, h3, h4 {
   outline: 0;
 }
 
-@media (min-width: 768px) {
-  #contact-btn{
-    padding: 0 40px;
-  }
-}
-
 
 .latest-post {
     width: 400px;
@@ -226,12 +220,6 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
 }
 
-@media screen and (max-width: 787px) {
-    .header-nav {
-        display: none;
-    }
-}
-
 /* Content section */
 
 #top {
@@ -245,6 +233,7 @@ h1, h2, h3, h4 {
 #content {
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
+    margin: 0 auto;
 }
 
 #post-content>h1, #post-content>h2,#post-content>h3 {
@@ -287,9 +276,11 @@ h1, h2, h3, h4 {
 }
 
 #post-content p {
-    width: 64vw;
+    width: 50vw;
     margin: 32px auto;
 }
+
+
 
 #post-content img {
     width: 100%;
@@ -335,6 +326,8 @@ h1, h2, h3, h4 {
 .tag-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -481,4 +474,92 @@ code {
 
 .dropbtn>img {
     vertical-align: text-top;
+}
+
+
+/* ASIDE Nav */
+
+
+.nav-section {
+    margin: 64px auto;
+    width: 90vw;
+}
+
+.nav-section a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+.nav-section .previous::before {
+    content: "Previous: ";
+}
+
+
+.nav-section .next::before {
+    content: "Next: ";
+}
+
+
+.nav-section>aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+
+
+}
+
+
+/* MEDIA */
+
+@media screen and (max-width: 768px) {
+    #post-content p {
+        width: 90vw;
+        word-wrap: break-word;
+        font-size: 1.2rem;
+    }
+    pre {
+        margin: 0;
+
+    }
+    .header-nav {
+        display: none;
+    }
+
+    #contact-btn{
+        padding: 0 40px;
+    }
+    .header-intro {
+        font-family: 0.9rem;
+    }
+
+    #search {
+        width: 30px;
+    }
+
+    .latest-post {
+        width: 90vw;
+    }
+
+    #top {
+        font-size: 2.5rem;
+        margin: 32px auto;
+    }
+    .metadata {
+        margin: 32px auto;
+    }
+
+
+    .nav-section>aside {
+        flex-direction: column;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #post-content p {
+        width: 80vw;
+    }
 }
