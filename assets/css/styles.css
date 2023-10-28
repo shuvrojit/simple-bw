@@ -627,9 +627,16 @@ code {
     .nav-section>aside {
         flex-direction: column;
     }
+    h1,h2,h3,h4 {
+        margin: 1rem;
+    }
+
+#post-content>h1, #post-content>h2,#post-content>h3 {
+    width: 90vw;
+    margin: 20px auto;
+    font-size: 1.3em;
 }
-
-
+}
 
 @media screen and (max-width: 1000px) {
     #post-content p {
