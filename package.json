@@ -1,0 +1,22 @@
+{
+  "description": "My blogging site",
+  "name": "myblog",
+  "private": true,
+  "scripts": {
+    "build": "hugo --cleanDestinationDir",
+    "server": "hugo server --disableFastRender",
+    "webpack": "webpack",
+    "watch": "webpack --watch",
+    "dev": "concurrently \"npm run watch\" \"npm run server\""
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "lunr": "^2.3.9"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

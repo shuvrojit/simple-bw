@@ -10,7 +10,7 @@
   {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
-  {{ $js := resources.Get "index.js" | js.Build }}
+  {{ $js := resources.Get "js/build/app.js" | js.Build  }}
 <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 
   <!-- {{- if .Site.Params.googleAnalytics -}} -->

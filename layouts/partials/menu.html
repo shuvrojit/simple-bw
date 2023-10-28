@@ -1,0 +1,11 @@
+<nav id="nav-menu" class="nav-menu">
+
+  {{ $cross := resources.Get "images/cross.svg" }}
+  <img id="cross" src="{{ $cross.RelPermalink }}" alt="cross" />
+<ul>
+  <li><a>Tags</a></li>
+  <li><a>Contact</a></li>
+  <li><a>Work</a></li>
+  <li><a>About</a></li>
+</ul>
+</nav>

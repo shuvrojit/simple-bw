@@ -549,6 +549,57 @@ code {
     vertical-align: text-top;
 }
 
+/* MENU */
+
+body {
+    position: relative;
+}
+
+#cross {
+    height: 64px;
+    width: 64px;
+    right: 1rem;
+    top: 1rem;
+    position: fixed;
+}
+
+.nav-menu {
+    display: none;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    /* transform: translateX(0%); */
+    /* top: 0; */
+    /* left: 0; */
+    background-color: yellowgreen;
+    position: absolute;
+}
+
+
+.nav-menu>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 10rem;
+}
+
+.nav-menu-display {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5 ease;
+    /* transform: translate(-100%); */
+    /* top: 0; */
+    /* left: 0; */
+}
+
 
 /* ASIDE Nav */
 
@@ -636,6 +687,12 @@ code {
     margin: 20px auto;
     font-size: 1.3em;
 }
+
+    .nav-menu {
+        font-size: 1.8rem;
+        font-weight: 800;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
