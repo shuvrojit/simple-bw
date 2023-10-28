@@ -1,9 +1,9 @@
 <header class="nav-header">
   <a href="/">
-  <div class="header-intro">
-    <p>Shuvrojit Biswas</p>
-    <p>Full Stack Web Developer</p>
-  </div>
+    <div class="header-intro">
+      <p>Shuvrojit Biswas</p>
+      <p>Full Stack Web Developer</p>
+    </div>
   </a>
   <div class="header-nav">
     <ul>
@@ -13,23 +13,29 @@
       <a href="/tags">
         <li>Tags</li>
       </a>
-{{ $caret := resources.Get "images/caret-down.svg" }}
+      {{ $caret := resources.Get "images/caret-down.svg" }}
 
       <div class="dropdown">
         <a class="dropbtn">Categories<img src="{{ $caret.RelPermalink }} "></a>
         <div id="myDropdown" class="dropdown-content">
-  {{ range .Site.Taxonomies.categories }}
-    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
-  {{ end }}
+          {{ range .Site.Taxonomies.categories }}
+          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+          {{ end }}
 
         </div>
       </div>
 
     </ul>
   </div>
-  <div class="search">
-    <input id="search" type="search" placeholder="Search">
-      <div><div>
+
+  {{ $search := resources.Get "images/search.svg" }}
+  {{ $moon := resources.Get "images/moon.svg" }}
+  {{ $sun := resources.Get "images/sun.svg" }}
+  {{ $menu := resources.Get "images/menu.svg" }}
+
+  <div class="navigation-icon">
+  <img src="{{ $search.RelPermalink }}" alt="Search" />
+  <img src="{{ $moon.RelPermalink }}" alt="moon" />
+  <img src="{{ $menu.RelPermalink }}" alt="menu" />
   </div>
-  <!-- <button id="contact-btn">Contact</button> -->
 </header>
