@@ -67,12 +67,12 @@ function addCopyButtons(clipboard) {
         });
 
         var pre = codeBlock.parentNode;
-        if (pre.parentNode.classList.contains('highlight')) {
-            var highlight = pre.parentNode;
-            highlight.parentNode.insertBefore(button, highlight);
-        } else {
+        // if (pre.parentNode.classList.contains('highlight')) {
+            // var highlight = pre.parentNode;
+            // highlight.parentNode.insertBefore(button, highlight);
+        // } else {
             pre.parentNode.insertBefore(button, pre);
-        }
+        // }
     });
 }
 
