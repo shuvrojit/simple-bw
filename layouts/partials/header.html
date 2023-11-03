@@ -16,7 +16,7 @@
       {{ $caret := resources.Get "images/caret-down.svg" }}
 
       <div class="dropdown">
-        <a class="dropbtn">Categories<img src="{{ $caret.RelPermalink }} "></a>
+        <a class="dropbtn">Categories<img id="cat-drop" src="{{ $caret.RelPermalink }} "></a>
         <div id="myDropdown" class="dropdown-content">
           {{ range .Site.Taxonomies.categories }}
           <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
@@ -30,12 +30,24 @@
 
   {{ $search := resources.Get "images/search.svg" }}
   {{ $moon := resources.Get "images/moon.svg" }}
-  {{ $sun := resources.Get "images/sun.svg" }}
   {{ $menu := resources.Get "images/menu.svg" }}
+  {{ $searchw := resources.Get "images/search-white.svg" }}
+  {{ $moon := resources.Get "images/moon.svg" }}
+  {{ $sun := resources.Get "images/sun-white.svg" }}
+  {{ $menuw := resources.Get "images/menu-white.svg" }}
 
-  <div class="navigation-icon">
-  <img src="{{ $search.RelPermalink }}" alt="Search" />
-  <img src="{{ $moon.RelPermalink }}" alt="moon" />
-  <img id="menu" src="{{ $menu.RelPermalink }}" alt="menu" />
-  </div>
+
+
+  <!-- <div class="navigation-icon"> -->
+    <!-- <div id="nav-icon-black"> -->
+    <!-- <img src="{{ $search.RelPermalink }}" alt="Search" /> -->
+    <!-- <img id="moon" src="{{ $moon.RelPermalink }}" alt="moon" /> -->
+    <img id="menu" src="{{ $menu.RelPermalink }}" alt="menu" />
+    <!-- </div> -->
+    <!-- <div id="nav-icon-white"> -->
+      <!-- <img src="{{ $searchw.RelPermalink }}" alt="Search" /> -->
+      <!-- <img id="sun" src="{{ $sun.RelPermalink }}" alt="moon" /> -->
+      <!-- <img id="menu" src="{{ $menuw.RelPermalink }}" alt="menu" /> -->
+    <!-- </div> -->
+  <!-- </div> -->
 </header>
