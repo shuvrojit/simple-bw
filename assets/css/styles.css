@@ -497,7 +497,7 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
-    text-align: center;
+    /* text-align: center; */
     width: 64vw;
     margin: 64px auto;
     gap: 40px
@@ -555,6 +555,15 @@ code {
 
 .darkmode--activated .dropbtn {
     color: white;
+}
+.darkmode-layer--button {
+    width: 28px;
+    height: 28px;
+
+
+}
+
+button.darkmode-toggle {
 }
 
 .dropbtn {
