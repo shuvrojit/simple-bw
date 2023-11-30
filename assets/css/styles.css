@@ -718,6 +718,19 @@ body {
 
 /* MEDIA */
 
+@media screen and (max-width: 520px) {
+    .nav-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-header>a {
+        align-self: flex-start;
+    }
+
+}
+
+
 @media screen and (max-width: 768px) {
     #post-content p {
         width: 90vw;
@@ -728,10 +741,6 @@ body {
         margin: 0;
 
     }
-    .header-nav {
-        display: none;
-    }
-
     #contact-btn{
         padding: 0 40px;
     }
@@ -790,3 +799,5 @@ body {
 .mode {
     display: none;
 }
+
+

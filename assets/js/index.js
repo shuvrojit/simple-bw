@@ -23,22 +23,30 @@ console.log("mangobar")
 
 const menu = document.getElementById("menu");
 const cross = document.getElementById("cross");
+const navMenu = document.getElementById("nav-menu");
 
-menu.addEventListener("click", () => {
-    toggleClass()
+// menu.addEventListener("click", () => {
+    // toggleClass()
+// })
+
+// cross.addEventListener("click", () => {
+    // toggleClass()
+// })
+
+const menuBtn = document.querySelector("#menu-icon");
+const navArea = document.querySelector("#nav-area");
+
+menuBtn.addEventListener("click", () => {
+
+  toggleClass(navArea, "nav-area-expand")
+
 })
 
-cross.addEventListener("click", () => {
-    toggleClass()
-})
 
 
 
-
-function toggleClass() {
-    var navMenu = document.getElementById("nav-menu");
-    console.log("hello")
-    navMenu.classList.toggle("nav-menu-display");
+function toggleClass(element, className) {
+    element.classList.toggle(className);
 }
 
 
@@ -132,4 +140,6 @@ new Darkmode().showWidget();
 //   mode()
 // })
 
+
 // console.log(darkmode.isActivated()) // will return true
+
