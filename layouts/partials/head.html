@@ -6,23 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ .Site.Title }}</title>
-<!-- <script src="https://kit.fontawesome.com/f90e4f4a50.js" crossorigin="anonymous"></script> -->
   {{ $css := resources.Get "css/styles.css" | minify | fingerprint }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
   {{ $js := resources.Get "js/build/app.js" | js.Build  }}
 <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 
-  <!-- {{- if .Site.Params.googleAnalytics -}} -->
-<!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-6T5CCL4346"></script> -->
-<!-- <script> -->
-<!--   window.dataLayer = window.dataLayer || []; -->
-<!--   function gtag(){dataLayer.push(arguments);} -->
-<!--   gtag('js', new Date()); -->
+  {{- if .Site.Params.googleAnalytics -}}
+Google tag (gtag.js)
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6T5CCL4346"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<!--   gtag('config', 'G-6T5CCL4346'); -->
-<!-- </script> -->
-<!-- {{ end }} -->
+  gtag('config', 'G-6T5CCL4346');
+</script>
+{{ end }}
 
 </head>
